@@ -41,13 +41,13 @@
 - Stats dropdown could be bigger but placement is good
 - Offering tutorial at start of app would be enough to understand icons
 
-## Participant 5 - No experience
+## Participant 5 - Some experience
 
 - Label filters should be higher up on Stats page
 - Without knowledge of filter functionality, its confusing what color is what
 - Items in timed event window are too small, hard to click; size should be increased
 
-## Participant 6 - Some experience
+## Participant 6 - No experience
 
 - Task 1: technical issues led to time delay and additional clicks; clicked wrong button and some other desktop window popped up
 - Task 2: reclicked wrong icon ('+') over and over again
