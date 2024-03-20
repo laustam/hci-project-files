@@ -68,6 +68,7 @@
 ## Participant 8 - Some experience
 
 - Task 1: clicked '+' instead of play but quickly remembered icon use from tutorial
+- Task 4: first clicked specific bar to check values, then remembered about filter labels and used those
 - Actual personal experience would have helped with performance, tutorial only provided overview but no interaction
 - Pie chart should be labeled because it is unclear otherwise without knowing that filter colors indicate slice labels
 - Filter should also affect pie chart
