@@ -1,7 +1,18 @@
 # Use Case Description
+{
+Our application is a calendar that has the added functionality of tracking time and displaying statistics to its users.  
 
-Our application is a calendar that has the added functionality of tracking time and displaying statistics to its users. The calendar allows basic features such as adding, removing, and editing of events. Additionally, it enables time tracking by featuring a stopwatch for selected events. To give users further insight in their time usage, the application also provides a dynamic statistical overview to help optimize one's schedule.
+NEW:
+The goal of the system is to provide functionality for general time and task management. The application is targeted towards both casual users that want to use basic features, as well as experienced users who use advanced features such as graph customization. 
 
+In order to fulfill this goal the calendar allows basic features such as adding, removing, and editing of events. Additionally, it enables time tracking by featuring a stopwatch for selected events. To give users further insight in their time usage, the application also provides a dynamic statistical overview to help optimize one's schedule. 
+
+NEW:
+Note that we do not target one specific audience since the application may be used by all kinds of users. Adtionally note that the users themselves decide how much functionality they want to use. One such example would be two students using the application. One student can decide to only use the application for adding, removing and editing events, totally ignoring the statistical overview functionality. While the other student can chose to fully make use of the statistical overview functionality and to always use the stopwatch feature while studying.
+}
+{
 The application features two main views. In the calendar view, the user can interact with any event or with the stopwatch. One can easily add events, modify them, and start a time-tracked session, all within this panel. 
-
-In the second view, the statistical display, the user can filter the data that is shown. The statistical overview provides all the tools the user needs to get an accurate assessment of how they spend their time, whether it is filtering by event category or modifying different graphs and charts.
+}
+{
+In the second view, the statistical display, the user can filter the data that is shown. The statistical overview provides all the tools the user needs to get an accurate assessment of how they spend their time, whether it is filtering by event category or modifying different graphs and charts. 
+}
