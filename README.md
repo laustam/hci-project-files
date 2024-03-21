@@ -16,6 +16,7 @@ This directory contains all files relating to creating the initial use case defi
 |`storyboard.pdf`|Storyboard|
 |`use_case_description.md`|Use Case Description|
 |`user_scenario_ramon.md`|User Scenario for Persona Ramon|
+|`use_case_scenario_brenda.md`|Use Case Scenario for Persona Brenda|
 
 ## `prototyping`
 
