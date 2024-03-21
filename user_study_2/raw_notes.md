@@ -1,6 +1,8 @@
 # User Study - Raw Notes
 
-## Participant 1 - No experience
+## Participants with no experience
+
+### Participant 1
 
 - Task 3: dropdown should be bigger; didn't see it at first
 - Task 4: did not use filtering but mentioned that more time or experience would make filtering functionality clearer and quicker to find
@@ -8,7 +10,7 @@
 - Difference between timer/stopwatch events with toggle are useful and clear
 - Filter icon for assigning labels in the timed events overview is unclear, name tag icon would make more sense
 
-## Participant 2 - No experience
+### Participant 2
 
 - Assumed that timer and stopwatch would be located in different locations, clicked '+' for task 2 multiple times (hence the large click count)
 - Stats icon is very clear, instantly recognized this is where to navigate to for tasks 3 and 4
@@ -20,15 +22,7 @@
 - Timer and stopwatch in the same place makes sense
 - Timed event icon is general enough to encompass both stopwatch and timer - no need to change
 
-## Participant 3 - Some experience
-
-- Task 1: incorrectly clicked '+' instead of play
-- Task 3: immediately interacted with filter
-- Filter should have effect on both pie and bar charts
-- Icons not instantly clear, could label the icons for clarity with short word above; especially useful for less tech savvy people (ie older people)
-- Changing icon order may be useful
-
-## Participant 4 - No experience
+### Participant 3
 
 - Task 3: immediately clicked work filter but then realized that pie chart interaction was needed instead of bar chart
 - Task 4: used filter
@@ -41,13 +35,7 @@
 - Stats dropdown could be bigger but placement is good
 - Offering tutorial at start of app would be enough to understand icons
 
-## Participant 5 - Some experience
-
-- Label filters should be higher up on Stats page
-- Without knowledge of filter functionality, its confusing what color is what
-- Items in timed event window are too small, hard to click; size should be increased
-
-## Participant 6 - No experience
+### Participant 4
 
 - Task 1: technical issues led to time delay and additional clicks; clicked wrong button and some other desktop window popped up
 - Task 2: reclicked wrong icon ('+') over and over again
@@ -58,14 +46,29 @@
 - Blue color of pie chart is too dark, can't see text; highlighting glow effect on text could help
 - Filtering labels in Stats overview is not scalable; with more labels not all will be visible (without scrolling) so pie chart pieces will be unidentifiable
 
-## Participant 7 - Some experience
+## Participants with some experience
+
+### Participant 5
+
+- Task 1: incorrectly clicked '+' instead of play
+- Task 3: immediately interacted with filter
+- Filter should have effect on both pie and bar charts
+- Icons not instantly clear, could label the icons for clarity with short word above; especially useful for less tech savvy people (ie older people)
+- Changing icon order may be useful
+
+### Participant 6
+
+- Label filters should be higher up on Stats page
+- Without knowledge of filter functionality, its confusing what color is what
+- Items in timed event window are too small, hard to click; size should be increased
+
+### Participant 7
 
 - Task 3: only interacted with dropdown, did not use filter at all; correct understanding of intended implementation likely due to experience
 - Icons are clear but take up lots of space; could use something similar to Twitter's setup with one '+' icon in bottom right corner that expands more options (ie to create event, initiate stopwatch or timer)
 - Dragger label should be changed from 120m to 2:00h
 
-
-## Participant 8 - Some experience
+### Participant 8
 
 - Task 1: clicked '+' instead of play but quickly remembered icon use from tutorial
 - Task 4: first clicked specific bar to check values, then remembered about filter labels and used those
