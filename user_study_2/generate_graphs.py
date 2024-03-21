@@ -1,11 +1,14 @@
 import matplotlib.pyplot as plt
 import pandas as pd
+import numpy as np
 
 TITLE_SIZE = 20
 AXES_SIZE = 15
 LEGEND_SIZE = 13
+EXPERIENCE_COLOR = "blue"
+NO_EXPERIENCE_COLOR = "orange"
 
-def graph_data(dependent_var: str, filename: str):
+def graphs_performance_per_task(dependent_var: str, filename: str):
     # Sort and filter tasks
     tasks = data['Task'].unique()
 
@@ -16,7 +19,7 @@ def graph_data(dependent_var: str, filename: str):
 
     for i, task in enumerate(sorted(tasks)):
         task_data = data[data['Task'] == task].sort_values(by='Participant')
-        colors = task_data['Experience level'].apply(lambda x: 'blue' if x == "Some" else 'orange').to_list()
+        colors = task_data['Experience level'].apply(lambda x: EXPERIENCE_COLOR if x == "Some" else NO_EXPERIENCE_COLOR).to_list()
         
         axs[i].bar(task_data['Participant'], task_data[dependent_var], color=colors, alpha=0.75)
         axs[i].set_title(f'Task {task}', fontsize=TITLE_SIZE)
@@ -26,8 +29,50 @@ def graph_data(dependent_var: str, filename: str):
 
     # Adding a legend
     labels = ['No Experience', 'Experienced']
-    handles = [plt.Rectangle((0,0),1,1, color=color, ec="k") for color in ['orange','blue']]
-    plt.figlegend(handles, labels, loc='upper right', borderaxespad=0.1, title="Experience Level", fontsize=LEGEND_SIZE).get_title().set_fontsize(LEGEND_SIZE)
+    handles = [plt.Rectangle((0,0),1,1, color=color, ec="k") for color in [NO_EXPERIENCE_COLOR,EXPERIENCE_COLOR]]
+    plt.figlegend(handles, labels, loc='upper right', borderaxespad=0.1, fontsize=LEGEND_SIZE)
+
+    plt.tight_layout()
+    plt.savefig(filename, format='pdf', dpi=300, bbox_inches='tight')  # Save the figure
+
+def graph_average_performance_per_task(dependent_var: str, filename: str):
+    # Splitting the dataframe based on experience level
+    df_exp = data[data['Experience level'] == 'Some']
+    df_no_exp = data[data['Experience level'] != 'Some']
+
+    print(df_exp)
+    print(df_no_exp)
+
+    # Calculating averages and error margins for time taken
+    time_avg_exp = df_exp.groupby('Task')[dependent_var].mean()
+    time_avg_no_exp = df_no_exp.groupby('Task')[dependent_var].mean()
+
+    time_min_exp = df_exp.groupby('Task')[dependent_var].min()
+    time_max_exp = df_exp.groupby('Task')[dependent_var].max()
+
+    time_min_no_exp = df_no_exp.groupby('Task')[dependent_var].min()
+    time_max_no_exp = df_no_exp.groupby('Task')[dependent_var].max()
+
+    # Error bars (min and max values)
+    time_error_exp = [time_avg_exp - time_min_exp, time_max_exp - time_avg_exp]
+    time_error_no_exp = [time_avg_no_exp - time_min_no_exp, time_max_no_exp - time_avg_no_exp]
+
+    # Setting up the plot for time taken
+    tasks = np.arange(1, len(time_avg_exp) + 1)  # Assuming the same number of tasks for both groups
+    bar_width = 0.35  # Width of the bars
+
+    fig, ax = plt.subplots()
+    ax.bar(tasks - bar_width/2, time_avg_exp, bar_width, yerr=time_error_exp, 
+        label='Some Experience', color=EXPERIENCE_COLOR, capsize=5)
+    ax.bar(tasks + bar_width/2, time_avg_no_exp, bar_width, yerr=time_error_no_exp, 
+        label='No Experience', color=NO_EXPERIENCE_COLOR, capsize=5)
+
+    # Labels, title and legend
+    ax.set_xlabel('Task Number', fontsize=AXES_SIZE)
+    ax.set_ylabel(f'Average {dependent_var}', fontsize=AXES_SIZE)
+    ax.set_title(f'Average {dependent_var} per Task by Experience Level', fontsize=TITLE_SIZE)
+    ax.set_xticks(tasks)
+    ax.legend(fontsize=LEGEND_SIZE)
 
     plt.tight_layout()
     plt.savefig(filename, format='pdf', dpi=300, bbox_inches='tight')  # Save the figure
@@ -36,5 +81,8 @@ def graph_data(dependent_var: str, filename: str):
 data_path = 'raw-data.xlsx'  # Make sure to update this path to your actual data file
 data = pd.read_excel(data_path)
 
-graph_data("Time (s)", "graph_time_taken.pdf")
-graph_data("Number of clicks", "graph_clicks.pdf")
+graphs_performance_per_task("Time (s)", "graph_time_taken.pdf")
+graphs_performance_per_task("Number of clicks", "graph_clicks.pdf")
+
+graph_average_performance_per_task("Time (s)", "graph_avg_time_taken.pdf")
+graph_average_performance_per_task("Number of clicks", "graph_avg_clicks.pdf")
