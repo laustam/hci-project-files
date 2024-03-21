@@ -70,7 +70,7 @@ def graph_average_performance_per_task(dependent_var: str, filename: str):
     # Labels, title and legend
     ax.set_xlabel('Task Number', fontsize=AXES_SIZE)
     ax.set_ylabel(f'Average {dependent_var}', fontsize=AXES_SIZE)
-    ax.set_title(f'Average {dependent_var} per Task by Experience Level', fontsize=TITLE_SIZE)
+    # ax.set_title(f'Average {dependent_var} per Task by Experience Level', fontsize=TITLE_SIZE)
     ax.set_xticks(tasks)
     ax.legend(fontsize=LEGEND_SIZE)
 
