@@ -1,6 +1,9 @@
 # Contents
 
+> **_NOTE:_** The final project report can be found in the directory `/experimentation/user_study` and is named `user_study.pdf`
+
 Each section in this `README` file is related to a subdirectory of the project directory. Within each of these sections, more details about the contents of that specific subdirectory is given.
+
 
 ## `use_case_definition`
 
@@ -41,3 +44,4 @@ This directory contains two subdirectories for files related to the pilot study 
 | Raw data collected | The raw data collected during the study that includes recorded values for the independent and dependent variables of the experiment (Excel) and the researcher's anonymous observations made of participant performance and feedback (Markdown) | Excel: `raw-data.xlsx`; Research notes: `raw_notes.md`| Excel: `raw-data.xlsx`, Researcher notes: `raw_notes.md` |
 | Scripts used to create graphs | Python scripts used to create final data visualizations | Raw data: `graphs-all.py`; Averaged data: `graphs-avg.py` | `generate_graphs.py` |
 | Graphs | Two types of graphs saved in PDF version: histograms for raw data and for averaged data | Raw data: `time_taken_histogram.pdf`, `number_of_clicks_histogram.pdf`; Averaged data: `average_time_taken_histogram.pdf`, `average_clicks_histogram.pdf`   | Raw data: `graph_time_taken.pdf`, `graph_clicks.pdf`; Averaged data: `graph_avg_time_taken.pdf`, `graph_avg_clicks.pdf`
+| Report on Study | Report about the specific study | `pilot_study.pdf` | `user_study.pdf` |
