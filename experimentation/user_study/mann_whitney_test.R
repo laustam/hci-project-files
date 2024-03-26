@@ -3,6 +3,12 @@ library(dplyr)
 
 data <- read_excel("raw-data.xlsx") # NOTE: ensure you are in the correct working directory (user_study)
 
+# Mann Whitney Test for Time(s)
+wilcox.test(`Time (s)` ~ `Experience level`, data = data, exact = FALSE)
+
+# Mann Whitney Test for Number of clicks
+wilcox.test(`Number of clicks` ~ `Experience level`, data = data, exact = FALSE)
+
 # Prepare a function to run the Mann-Whitney U test for a given task and dependent variable
 run_mann_whitney <- function(data, task, dependent_variable) {
   # Filter data for the specific task
